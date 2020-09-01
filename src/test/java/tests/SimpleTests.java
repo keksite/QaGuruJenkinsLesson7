@@ -12,7 +12,9 @@ public class SimpleTests {
     @Test
     void upperCaseTest() {
         String name = "apple";
-        assertThat(name.toUpperCase(), equalTo("APPLE"));
+        String result_name = "APPLE";
+        String newName = name.toUpperCase();
+        assertThat(newName, equalTo(result_name));
     }
 
     @Test
@@ -24,6 +26,6 @@ public class SimpleTests {
         for (int i = 1; i < b; i++) {
             result *= a;
         }
-        assertEquals(Math.pow(a, b) , result);
+        assertEquals(Math.pow(a, b), result);
     }
 }
